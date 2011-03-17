@@ -1,0 +1,19 @@
+EventLog:
+  actAs:
+    Timestampable: ~
+    Signable: ~
+  columns:
+    object_id: integer
+    object_model: string(20)
+    description: string(255)
+
+EventLogNote:
+  actAs:
+    Timestampable: ~
+    Signable: ~
+  columns:
+    event_log_id: integer
+  relations:
+    EventLog:
+      foreignAlias: Notes
+      onDelete: cascade
