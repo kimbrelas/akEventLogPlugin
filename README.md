@@ -1,3 +1,9 @@
+Adding the behavior will trigger the auto-logging of adds, edits and deletes (these can be overridden when necessary). It will also give the loggable object access to certain methods.
+
+In the schema:
+actAs: 
+  Loggable: ~
+
 How to manually log an event to the database (this will NOT bypass the doctrine listeners (insert, update, delete), use customLog() for that)
 
 $loggableObj->logEvent('Some description');
